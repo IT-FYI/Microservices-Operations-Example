@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jenkins:
+    build: jenkins
+    image: jenkins:2.46.3-alpine
+    container_name: jenkins
+    hostname: jenkins
+    environment:
+      JAVA_OPTS: "-Djava.awt.headless=true"
+    ports:
+      - "50000:50000"
+      - "8080:8080"
